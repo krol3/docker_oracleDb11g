@@ -16,5 +16,7 @@ EXPOSE 1521
 EXPOSE 8080
 
 WORKDIR /dbscritps/
-CMD bash -C '/dbscritps/startup.sh';'bash' 
+CMD startup.sh
+#CMD ["/bin/bash", "/dbscritps/startup.sh"]
+#CMD bash -C '/dbscritps/startup.sh';'bash'
 

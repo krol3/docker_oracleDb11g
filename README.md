@@ -5,7 +5,9 @@ docker build -t krol/oracledb11g .
 docker run -it --rm=true -p 1521:1521 -p 8080:8080 krol/oracledb11g /bin/bash 
 
 #run docker daemonized
-docker run --name oracledb11gXE -d -p 1521:1521 -p 8080:8080 krol/oracledb11g startup.sh  
+docker run --name dbxe11g -p 8080:8080 -p 1521:1521 -itd krol/oracledb11g /bin/bash 
+
+docker exec -it ID_container /dbscritps/startup.sh 
 
 Instalation from oracle-xe-11.2.0-1.0.x86_64
 
