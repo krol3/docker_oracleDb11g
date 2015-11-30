@@ -1,8 +1,11 @@
 #Build a docker file
 docker build -t sciensa2/oracle-db11g .
+docker build -t krol/oracle-db11g .
 
 #run docker file
 docker run -it --rm=true -p 1521:1521 -p 8080:8080 sciensa2/oracle-db11g /bin/bash 
+
+docker run -it --rm=true -p 1521:1521 -p 8080:8080 krol/oracle-db11g 
 
 #run docker daemonized
 docker run --name dbxe11g -p 8080:8080 -p 1521:1521 -itd krol/oracledb11g /bin/bash 
