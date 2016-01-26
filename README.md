@@ -8,7 +8,7 @@ docker run -it --rm=true -p 1521:1521 -p 8080:8080 sciensa2/oracle-db11g /bin/ba
 docker run -it --rm=true -p 1521:1521 -p 8080:8080 krol/oracle-db11g 
 
 #run docker daemonized
-docker run --name dbxe11g -p 8080:8080 -p 1521:1521 -itd krol/oracledb11g /bin/bash 
+docker run --name dbxe11g -p 8080:8080 -p 1521:1521 -itd krol/oracle-db11g /bin/bash 
 
 docker exec -it ID_container /dbscritps/startup.sh 
 
