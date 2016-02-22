@@ -16,5 +16,4 @@ EXPOSE 1521
 EXPOSE 8080
 
 WORKDIR /dbscritps/
-ENTRYPOINT ["/dbscritps/startup.sh"] 
-
+#ENTRYPOINT ["/dbscritps/startup.sh"] 
